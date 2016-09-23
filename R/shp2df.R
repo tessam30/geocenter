@@ -13,7 +13,6 @@
 #' @import maptools
 #' @import dplyr
 #' @import sp
-#' @import rgeos
 #'
 #' @param baseDir string containing the name of the base directotry containing the shapefile
 #' @param folderName (optional) string containing the name of the folder within baseDir containing the shapefile. Not required if baseDir contains the full name of the folder containing the shapefile
