@@ -12,6 +12,7 @@
 #' @import rgdal
 #' @import maptools
 #' @import dplyr
+#' @import sp
 #' @import rgeos
 #'
 #' @param baseDir string containing the name of the base directotry containing the shapefile
