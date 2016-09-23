@@ -30,4 +30,8 @@ read_shp = function(baseDir = getwd(),
 
   # the dsn argument of '.' says to look for the layer in the current directory.
   rawShp = rgdal::readOGR(dsn = ".", layer = layerName)
+
+  setwd(currentDir)
+
+  return(rawShp)
 }
