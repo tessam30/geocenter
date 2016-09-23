@@ -48,7 +48,7 @@ shp2df = function(baseDir = getwd(),
 
   if (reproject == TRUE) {
     # reproject the data
-    projectedShp = sp::spTransform(rawShp, CRS(projection))
+    projectedShp = sp::spTransform(rawShp, sp::CRS(projection))
   } else {
     projectedShp = rawShp
   }
