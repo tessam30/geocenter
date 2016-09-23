@@ -8,11 +8,10 @@
 #'
 #' @author Laura Hughes, laura.d.hughes@gmail.com
 #'
-#' @import ggplot2
-#' @import rgdal
-#' @import maptools
-#' @import dplyr
-#' @import sp
+#' @require ggplot2
+#' @require rgdal
+#' @require maptools
+#' @require dplyr
 #'
 #' @param baseDir string containing the name of the base directotry containing the shapefile
 #' @param folderName (optional) string containing the name of the folder within baseDir containing the shapefile. Not required if baseDir contains the full name of the folder containing the shapefile
