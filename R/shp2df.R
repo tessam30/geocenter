@@ -49,7 +49,7 @@ shp2df = function(baseDir = getwd(),
 
   if (reproject == TRUE) {
     # reproject the data
-    projectedShp = spTransform(rawShp, CRS(projection))
+    projectedShp = sp::spTransform(rawShp, CRS(projection))
   } else {
     projectedShp = rawShp
   }
@@ -57,7 +57,7 @@ shp2df = function(baseDir = getwd(),
   projectedShp@data$id = rownames(projectedShp@data)
 
   # Convert the shape polygons into a series of lat/lon coordinates.
-  poly_points = ggplot2::fortify(projectedShp, region = "id")
+  poly_points = fortify(projectedShp, region = "id")
 
   # Merge the polygon lat/lon points with the original data
   df = dplyr::left_join(poly_points, projectedShp@data, by = "id")
