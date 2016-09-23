@@ -2,4 +2,7 @@
 
 export(read_shp)
 export(shp2df)
+import(dplyr)
+import(ggplot2)
+import(maptools)
 import(rgdal)
