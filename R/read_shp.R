@@ -8,7 +8,8 @@
 #'
 #' @import rgdal
 #'
-#' @param workingDir string containing the name of the folder containing the shapefile
+#' @param baseDir string containing the name of the base directotry containing the shapefile
+#' @param folderName (optional) string containing the name of the folder within baseDir containing the shapefile. Not required if baseDir contains the full name of the folder containing the shapefile
 #' @param layerName string containing the name of the shapefile, e.g. 'district_boundary' for 'district_boundary.shp'. Should not include '.shp'
 #'
 #' @export
@@ -28,5 +29,5 @@ read_shp = function(baseDir = getwd(),
   setwd(paste0(baseDir, folderName))
 
   # the dsn argument of '.' says to look for the layer in the current directory.
-  rawShp = readOGR(dsn = ".", layer = layerName)
+  rawShp = rgdal::readOGR(dsn = ".", layer = layerName)
 }
