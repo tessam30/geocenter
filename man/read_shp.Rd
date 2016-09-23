@@ -4,15 +4,18 @@
 \alias{read_shp}
 \title{Import ESRI shapefiles into R}
 \usage{
-read_shp(workingDir = getwd(), layerName)
+read_shp(baseDir = getwd(), folderName = NULL, layerName)
 }
 \arguments{
-\item{workingDir}{string containing the name of the folder containing the shapefile}
+\item{baseDir}{string containing the name of the base directotry containing the shapefile}
 
-\item{layerName}{string containing the name of the shapefile, e.g. 'district_boundary' for 'district_boundary.shp'}
+\item{folderName}{(optional) string containing the name of the folder within baseDir containing the shapefile. Not required if baseDir contains the full name of the folder containing the shapefile}
+
+\item{layerName}{string containing the name of the shapefile, e.g. 'district_boundary' for 'district_boundary.shp'. Should not include '.shp'}
 }
 \description{
-Import shapefile into an R spatial object
+Import shapefile into an R spatial polygons object. Useful for plotting within the leaflet package,
+or for downstream use to convert into a series of lat/lon coordinates.
 }
 \author{
 Laura Hughes, laura.d.hughes@gmail.com
