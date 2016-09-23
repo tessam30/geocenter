@@ -4,7 +4,12 @@ Title: Helper Functions for Spatial Processing and Mapping
 Version: 0.1.0
 Author: Laura Hughes
 Authors@R: person("Laura", "Hughes", email = "laura.d.hughes@gmail.com", role = c("aut", "cre"))
-Description: 1) import shpfiles 2) plot shpfiles 3)spatial joins
+Description: 1) import shpfiles 2) plot shpfiles 3) spatial joins
+Imports:
+  rgdal,
+  maptools,
+  ggplot2,
+  dplyr
 Depends:
     R (>= 3.2.2)
 License: MIT
