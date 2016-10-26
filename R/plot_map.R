@@ -1,10 +1,6 @@
-#' Import ESRI shapefiles into R data frame
+#' Plot a basic map
 #'
-#' Import shapefile and convert into lat/lon coordinates to plot in R or Tableau
-#'
-#' View available projections with 'projInfo(type = 'proj')'
-#' View available datum with 'projInfo(type = 'datum')'
-#' View available ellipsoids with 'projInfo(type = 'ellps')'
+#' Given a data frame containing lat/long, make a basic map
 #'
 #' @author Laura Hughes, laura.d.hughes@gmail.com
 #'
