@@ -9,7 +9,8 @@ Imports:
   rgdal,
   maptools,
   ggplot2,
-  dplyr
+  dplyr,
+  rgeos
 Depends:
     R (>= 3.2.2)
 License: MIT
