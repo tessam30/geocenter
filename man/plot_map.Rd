@@ -4,7 +4,8 @@
 \alias{plot_map}
 \title{Plot a basic map}
 \usage{
-plot_map(df, fill_var, stroke_size = 0.15, stroke_colour = "white")
+plot_map(df, fill_var, stroke_size = 0.15, stroke_colour = "white",
+  file_name = NA, plot_width = 5, plot_height = 5)
 }
 \description{
 Given a data frame containing lat/long, make a basic map
