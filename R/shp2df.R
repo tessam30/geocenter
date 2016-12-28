@@ -40,24 +40,20 @@ shp2df = function(baseDir = getwd(),
   # Log the current working directory, to change back at the end.
   currentDir = getwd()
 
-  # Read in the raw shapefile
+  # -- READ in the raw shapefile --
   rawShp = read_shp(baseDir = baseDir, folderName = folderName, layerName = layerName)
 
   if (reproject == TRUE) {
-    # reproject the data
+    # -- REPRPROJECT the data --
     projectedShp = sp::spTransform(rawShp, sp::CRS(projection))
   } else {
     projectedShp = rawShp
   }
-  # pull out the row names from the data and save it as a new column called 'id'
-  projectedShp@data$id = rownames(projectedShp@data)
 
-  # Convert the shape polygons into a series of lat/lon coordinates.
-  poly_points = ggplot2::fortify(projectedShp, region = "id")
+  # -- CONVERT to LAT/LON --
+  df = sp2df(projectedShp)
 
-  # Merge the polygon lat/lon points with the original data
-  df = dplyr::left_join(poly_points, projectedShp@data, by = "id")
-
+  # -- FIND CENTROIDS --
   if (getCentroids == TRUE){
     # Pull out the centroids and the associated names.
     centroids = data.frame(coordinates(projectedShp)) %>% rename(long = X1, lat = X2)
@@ -71,6 +67,7 @@ shp2df = function(baseDir = getwd(),
       }
     }
 
+    # -- SAVE --
     # if the 'exportData' option is selected, save the lat/lon coordinates as a .csv
     if (exportData == TRUE) {
       write.csv(df, paste0(baseDir, "/", fileName, ".csv"))
@@ -78,6 +75,7 @@ shp2df = function(baseDir = getwd(),
     }
 
 
+    # -- RETURN --
     # Return the dataframe containing the coordinates and the centroids
     return(list(df = df, centroids = centroids))
   } else {

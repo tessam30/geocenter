@@ -1,14 +1,8 @@
-#' Import ESRI shapefiles into R data frame
-#'
-#' Import shapefile and convert into lat/lon coordinates to plot in R or Tableau
-#'
-#' View available projections with 'projInfo(type = 'proj')'
-#' View available datum with 'projInfo(type = 'datum')'
-#' View available ellipsoids with 'projInfo(type = 'ellps')'
+#' Convert a spatial data frame into a series of lat/lon coordinates
 #'
 #' @author Laura Hughes, laura.d.hughes@gmail.com
 #'
-#' @import dplyr ggplot2 rgdal maptools
+#' @import ggplot2
 #'
 #'
 #' @export
@@ -16,7 +10,8 @@
 #'
 
 
-gadm2df = function(sp_df){
+sp2df = function(sp_df){
+  # pull out the row names from the data and save it as a new column called 'id'
   sp_df@data$id = rownames(sp_df@data)
 
   # Convert the shape polygons into a series of lat/lon coordinates.
