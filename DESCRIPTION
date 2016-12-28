@@ -1,4 +1,4 @@
-Package: frontier
+Package: geocenter
 Type: Package
 Title: Helper Functions for Spatial Processing and Mapping
 Version: 0.1.0
