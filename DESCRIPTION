@@ -6,6 +6,9 @@ Author: Laura Hughes
 Authors@R: person("Laura", "Hughes", email = "laura.d.hughes@gmail.com", role = c("aut", "cre"))
 Description: 1) import shpfiles 2) plot shpfiles 3) spatial joins
 Imports:
+  sf, 
+  sp, 
+  leaflet,
   rgdal,
   maptools,
   ggplot2,
@@ -15,4 +18,4 @@ Depends:
     R (>= 3.2.2)
 License: MIT
 LazyData: TRUE
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
