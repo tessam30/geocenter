@@ -20,4 +20,3 @@ or for downstream use to convert into a series of lat/lon coordinates.
 \author{
 Laura Hughes, laura.d.hughes@gmail.com
 }
-

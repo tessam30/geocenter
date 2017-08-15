@@ -40,4 +40,3 @@ View available ellipsoids with 'projInfo(type = 'ellps')'
 \author{
 Laura Hughes, laura.d.hughes@gmail.com
 }
-

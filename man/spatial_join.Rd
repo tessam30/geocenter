@@ -24,6 +24,8 @@ spatial_join(shp, df, proj_crs, lat_var = "lat", lon_var = "lon",
 \item{binary_var}{string specifiying the name of a new binary variable created in the output for whether the point is within any polygon in `shp` or not}
 
 \item{merge2shp}{TRUE/FALSE if `df` should be merged with the contents of `shp`}
+
+\item{plot_results}{TRUE/FALSE if a leaflet map of the join should be plotted}
 }
 \description{
 Imports a shp file and a data frame loaded into R, and does a spatial

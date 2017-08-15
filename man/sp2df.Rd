@@ -15,4 +15,3 @@ Convert a spatial data frame into a series of lat/lon coordinates
 \author{
 Laura Hughes, laura.d.hughes@gmail.com
 }
-

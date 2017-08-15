@@ -16,4 +16,3 @@ Given a data frame containing lat/long, make a basic map
 \author{
 Laura Hughes, laura.d.hughes@gmail.com
 }
-
